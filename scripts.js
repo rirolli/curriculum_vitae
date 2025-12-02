@@ -87,24 +87,37 @@ function renderError(id, message) {
 // Icone/emoji per rendere le skill più leggibili
 function skillIconFor(label) {
     const pairs = [
-        [/python|pandas|numpy|scikit/i, '🐍'],
-        [/pytorch|tensorflow|supervised learning|unsupervised learning|deep learning/i, '🧠'],
-        [/docker|kubernetes/i, '🐳'],
-        [/sql|mongodb|postgres|mysql/i, '💾'],
-        [/fastapi/i, '⚡'],
-        [/mlflow|dvc/i, '📈'],
-        [/computer\s*vision|vision/i, '👁️'],
-        [/git|devops/i, '🔧'],
-        [/cloud|aws|azure|gcp/i, '☁️'],
-        [/javascript|typescript|react|vue|angular/i, '🖥️'],
-        [/html|css/i, '🌐'],
-        [/linux|bash|shell/i, '🐧'],
-        [/data engineering|etl|pipeline/i, '🔄'],
-        [/prefect|airflow/i, '🏗️'],
-        [/geospatial|gis|remote sensing/i, '🗺️']
+        [/python|pandas|numpy|scikit/i, '<i class="fa-brands fa-python"></i>'],
+        [/pytorch|tensorflow|supervised learning|unsupervised learning|deep learning/i, '<i class="fa-solid fa-brain"></i>'],
+        [/docker/i, '<i class="fa-brands fa-docker"></i>'],
+        [/kubernetes/i, '<i class="fa-solid fa-cubes"></i>'],
+        [/sql|mongodb|postgres|mysql/i, '<i class="fa-solid fa-database"></i>'],
+        [/fastapi/i, '<i class="fa-solid fa-bolt"></i>'],
+        [/mlflow|dvc/i, '<i class="fa-solid fa-chart-line"></i>'],
+        [/computer\s*vision|vision|opencv/i, '<i class="fa-solid fa-eye"></i>'],
+        [/git|devops/i, '<i class="fa-solid fa-screwdriver-wrench"></i>'],
+        [/cloud|aws|azure|gcp/i, '<i class="fa-solid fa-cloud"></i>'],
+        [/javascript|typescript|react|vue|angular/i, '<i class="fa-solid fa-code"></i>'],
+        [/html|css/i, '<i class="fa-solid fa-globe"></i>'],
+        [/linux|bash|shell/i, '<i class="fa-brands fa-linux"></i>'],
+        [/data engineering|etl|pipeline/i, '<i class="fa-solid fa-diagram-project"></i>'],
+        [/prefect|airflow/i, '<i class="fa-solid fa-project-diagram"></i>'],
+        [/geospatial|gis|remote sensing|geography|map/i, '<i class="fa-solid fa-map"></i>'],
+        [/nlp|bert|transformers|spacy|nltk/i, '<i class="fa-solid fa-language"></i>'],
+        [/time series|forecast|arima|prophet/i, '<i class="fa-solid fa-chart-area"></i>'],
+        [/spark|hadoop|big\s*data/i, '<i class="fa-solid fa-fire"></i>'],
+        [/tableau|power\s*bi|metabase|superset/i, '<i class="fa-solid fa-chart-bar"></i>'],
+        [/rest|api|graphql/i, '<i class="fa-solid fa-plug"></i>'],
+        [/pytest|unittest|testing/i, '<i class="fa-solid fa-vial"></i>'],
+        [/ci\/?cd|github actions|gitlab ci|jenkins/i, '<i class="fa-solid fa-gear"></i>'],
+        [/microservice|distributed|scalable/i, '<i class="fa-solid fa-network-wired"></i>'],
+        [/optimization|optimizer|tuning/i, '<i class="fa-solid fa-sliders"></i>'],
+        [/statistics|probability|bayes/i, '<i class="fa-solid fa-square-root-variable"></i>'],
+        [/matplotlib|seaborn|plotly|charts/i, '<i class="fa-solid fa-chart-pie"></i>']
     ];
     for (const [re, ico] of pairs) if (re.test(label)) return ico;
-    return '';
+    // Default icon when no mapping matches
+    return '<i class="fa-solid fa-tag"></i>';
 }
 
 function renderSkillChip(item) {
@@ -191,8 +204,13 @@ async function init() {
             avatarEl.src = src;
             avatarEl.alt = `Foto di ${profile.name}`;
             avatarEl.title = `Foto di ${profile.name}`;
-            avatarEl.loading = 'lazy';
+            // Improve in-view load performance
+            avatarEl.loading = 'eager';
             avatarEl.decoding = 'async';
+            try { avatarEl.fetchPriority = 'high'; } catch (_) {}
+            // Provide intrinsic size to avoid reflow
+            avatarEl.width = 256;
+            avatarEl.height = 256;
         }
 
         // Profilo
