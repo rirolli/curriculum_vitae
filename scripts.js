@@ -186,6 +186,7 @@ async function init() {
                 <div class="job">
                     <h3>${job.role} — ${job.company}</h3>
                     <span class="date">${job.period}</span>
+                    <p>${job.description}</p>
                     <ul>${job.points.map(p => `<li>${p}</li>`).join("")}</ul>
                     <div class="skills-chips">${job.skills.map(renderSkillChip).join("")}</div>
                 </div>

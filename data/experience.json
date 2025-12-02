@@ -3,6 +3,7 @@
         "role": "Machine Learning Engineer",
         "company": "e-Geos S.p.A.",
         "period": "04.2023 – Presente",
+        "description": "Sviluppo e deployment di modelli di Machine Learning per applicazioni geospaziali in ambienti cloud.",
         "points": [
             "Sviluppo end-to-end di modelli ML per sistemi operativi.",
             "Progettazione pipeline dati dipartimentali.",
@@ -15,6 +16,7 @@
         "role": "Machine Learning Intern",
         "company": "e-Geos S.p.A.",
         "period": "06.2022 – 04.2023",
+        "description": "Ricerca e sviluppo di modelli di Deep Learning per la classificazione e segmentazione di dati geospaziali.",
         "points": [
             "Sviluppo di modelli per classificazione e segmentazione geospaziale.",
             "Deployment di prototipi ML in strumenti interni riproducibili."
