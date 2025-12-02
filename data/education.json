@@ -3,12 +3,12 @@
         "title": "MSc in Computer Engineering",
         "institution": "Università degli Studi Roma Tre",
         "year": "2023",
-        "detail": "Tesi: Deep Learning per LULC con Sentinel-2."
+        "detail": "**Thesis title**: Use of Deep Learning for Land Use and Land Cover Classification Using Sentinel2 Optical Data."
     },
     {
         "title": "BSc in Computer Engineering",
         "institution": "Università degli Studi Roma Tre",
         "year": "2020",
-        "detail": "Tesi: Dueling Q-Network in RL."
+        "detail": "**Thesis title**: Application of the Dueling Q-Network Reinforcement Learning Algorithm in an Artificial Neural Network."
     }
 ]

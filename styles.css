@@ -217,6 +217,26 @@ a:hover { text-decoration: underline; }
     #theme-toggle { display: none; }
 }
 
+/* Languages section */
+.lang { margin-bottom: 16px; }
+.lang h3 { display:flex; align-items:center; gap:8px; margin:0 0 6px 0; }
+.lang .badge { 
+    display:inline-block; 
+    padding: 2px 8px; 
+    border-radius: 999px; 
+    font-size: 12px; 
+    background: var(--chip-bg); 
+    border: 1px solid var(--divider);
+}
+.lang .note { display:block; color: var(--muted); font-size: 14px; }
+.lang-meter { 
+    height: 8px; 
+    background: var(--divider); 
+    border-radius: 999px; 
+    overflow: hidden; 
+}
+.lang-meter-fill { height: 100%; background: var(--brand); }
+
 /* Contact icons spacing */
 #contacts i { 
     margin-right: 6px; 

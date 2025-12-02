@@ -184,8 +184,9 @@ async function init() {
     setLoading();
     setupThemeToggle();
     try {
-        const [profile, contacts, skills, experience, education] = await Promise.all([
+        const [profile, languages, contacts, skills, experience, education] = await Promise.all([
             loadJSON("data/profile.json"),
+            loadJSON("data/languages.json"),
             loadJSON("data/contacts.json"),
             loadJSON("data/skills.json"),
             loadJSON("data/experience.json"),
@@ -286,7 +287,7 @@ async function init() {
                 <div class="edu">
                     <h3>${edu.title}</h3>
                     <span class="date">${edu.institution} — ${edu.year}</span>
-                    <p>${edu.detail}</p>
+                    <p>${renderRichText(edu.detail)}</p>
                 </div>
             `).join("");
 
@@ -303,6 +304,21 @@ async function init() {
                     ${p.skills ? `<div class="skills-chips">${p.skills.map(renderSkillChip).join('')}</div>` : ''}
                 </div>
             `).join('') }
+            ,{ id: 'languages', file: 'data/languages.json', title: 'Languages', render: (data) => data.map(l => {
+                const level = (l.level || '').toUpperCase();
+                const map = { A1: 16, A2: 33, B1: 50, B2: 67, C1: 83, C2: 100 };
+                const pct = map[level] ?? (typeof l.percent === 'number' ? Math.max(0, Math.min(100, l.percent)) : null);
+                const note = l.note ? `<span class="note">${renderRichText(l.note)}</span>` : '';
+                const badge = level ? `<span class="badge">${level}</span>` : '';
+                const progress = pct != null ? `<div class="lang-meter" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="${pct}"><div class="lang-meter-fill" style="width:${pct}%"></div></div>` : '';
+                return `
+                    <div class="lang">
+                        <h3><i class="fa-solid fa-language" aria-hidden="true"></i> ${renderRichText(l.name || '')} ${badge}</h3>
+                        ${progress}
+                        ${note}
+                    </div>
+                `;
+            }).join('') }
         ];
 
         for (const sec of registry) {
