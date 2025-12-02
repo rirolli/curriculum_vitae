@@ -1,0 +1,22 @@
+[
+    {
+        "role": "Machine Learning Engineer",
+        "company": "e-Geos S.p.A.",
+        "period": "04.2023 – Presente",
+        "points": [
+            "Sviluppo end-to-end di modelli ML per sistemi operativi.",
+            "Progettazione pipeline dati dipartimentali.",
+            "Collaborazione cross-team su architetture integrate.",
+            "Mentoring di un junior ML engineer."
+        ]
+    },
+    {
+        "role": "Machine Learning Intern",
+        "company": "e-Geos S.p.A.",
+        "period": "06.2022 – 04.2023",
+        "points": [
+            "Sviluppo di modelli per classificazione e segmentazione geospaziale.",
+            "Deployment di prototipi ML in strumenti interni riproducibili."
+        ]
+    }
+]

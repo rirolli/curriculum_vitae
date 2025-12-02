@@ -1,0 +1,14 @@
+[
+    {
+        "title": "MSc in Computer Engineering",
+        "institution": "Università degli Studi Roma Tre",
+        "year": "2023",
+        "detail": "Tesi: Deep Learning per LULC con Sentinel-2."
+    },
+    {
+        "title": "BSc in Computer Engineering",
+        "institution": "Università degli Studi Roma Tre",
+        "year": "2020",
+        "detail": "Tesi: Dueling Q-Network in RL."
+    }
+]

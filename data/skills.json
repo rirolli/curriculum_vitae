@@ -1,0 +1,20 @@
+{
+    "sections": [
+        {
+            "title": "Machine Learning & Analytics",
+            "items": ["Supervised/Unsupervised", "Deep Learning", "Computer Vision"]
+        },
+        {
+            "title": "ML Frameworks",
+            "items": ["PyTorch", "TensorFlow", "Scikit-Learn"]
+        },
+        {
+            "title": "Data Engineering",
+            "items": ["Pandas", "NumPy", "SQL", "MongoDB"]
+        },
+        {
+            "title": "MLOps & Deployment",
+            "items": ["Docker", "FastAPI", "MLflow", "DVC", "Git"]
+        }
+    ]
+}
