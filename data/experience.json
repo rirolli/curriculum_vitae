@@ -2,7 +2,7 @@
     {
         "role": "Machine Learning Engineer",
         "company": "e-Geos S.p.A.",
-        "period": "04.2023 – Presente",
+        "period": "04.2023 – Present",
         "description": "As a Machine Learning Engineer, I develop ML and AI solutions designed to integrate into complex, production-grade systems used across international projects. I work at the intersection of model development, data pipeline engineering and system integration, focusing on scalability, reliability and reproducibility.",        
         "points": [
             "**End-to-end ML model development** for operational systems, from design and training to containerized deployment and exposure through REST APIs.",
