@@ -3,9 +3,9 @@
         "role": "Machine Learning Engineer",
         "company": "e-Geos S.p.A.",
         "period": "04.2023 – Present",
-        "description": "Machine learning and AI solution development for integration into complex, production-grade systems used across international projects. Work at the intersection of model development, data pipeline engineering, and system integration, with a focus on scalability, reliability, and reproducibility.",
+        "description": "Machine learning and AI solution development for integration into complex, production-grade systems used across international projects. Work at the intersection of model development and data pipeline engineering, with a focus on scalability, reliability, and reproducibility",
         "points": [
-            "**End-to-end ML model development** for operational systems, from design and training to containerized deployment and exposure through REST APIs.",
+            "**End-to-end ML model development** for operational systems, from design and training to containerized deployment.",
             "**Design and implementation of data pipelines** for retrieval, selection, and preprocessing, now adopted across the department and significantly improving automation and data preparation times.",
             "**Cross-team collaboration** to deliver integrated workflows combining ML, data engineering, and software components into coherent, scalable architectures.",
             "**Mentoring and guidance of a junior ML resource** to support the full development process, accelerate onboarding, and enhance team execution capacity.",
