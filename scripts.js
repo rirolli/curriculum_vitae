@@ -341,7 +341,7 @@ async function init() {
             `).join('') }
             ,{ id: 'languages', file: 'data/languages.json', title: 'Languages', render: (data) => data.map(l => {
                 const level = (l.level || '').toUpperCase();
-                const map = { A1: 16, A2: 33, B1: 50, B2: 67, C1: 83, C2: 100 };
+                const map = { A1: 16, A2: 33, B1: 50, B2: 67, C1: 83, C2: 100, NATIVE: 100 };
                 const pct = map[level] ?? (typeof l.percent === 'number' ? Math.max(0, Math.min(100, l.percent)) : null);
                 const note = l.note ? `<span class="note">${renderRichText(l.note)}</span>` : '';
                 const badge = level ? `<span class="badge">${level}</span>` : '';
